@@ -5,8 +5,10 @@
 :root {
   --font-family: "Inter", sans-serif;
   --primary: #155bd5;
-  --site-color: #1d2c0c;
-  --site-hover: #551a07;
+  /* --site-color: #1d2c0c; */
+  --site-color: #02bfa6;
+  --site-hover: #02bfa6;
+  /* --site-hover: #551a07; */
   --primary-dark: #1c3ab6;
   --primary-light: #e2f1ff;
   --accent: #00d4d7;
@@ -913,7 +915,8 @@ p {
 .header-eight {
   position: relative;
   padding:160px 0 100px 0;
-  background: var(--site-color);
+  /* background: var(--site-color); */
+  background: #deefed;
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .header-eight {
@@ -942,7 +945,8 @@ p {
 }
 .header-eight .header-content h1 {
   font-weight: 700;
-  color: var(--white);
+  /* color: var(--white); */
+  color: #474463;
   text-shadow: 0px 3px 8px #00000017;
   text-transform: capitalize;
 }
@@ -963,20 +967,25 @@ p {
 }
 .header-eight .header-content p {
   margin-top: 30px;
-  color: var(--white);
-  opacity: 0.7;
+  /* color: var(--white); */
+  color: #474463;
+  /* opacity: 0.7; */
+  opacity: 1;
 }
 .header-eight .button {
   margin-top: 40px;
 }
 .header-eight .primary-btn {
   margin-right: 12px;
-  background-color: var(--white);
-  color: var(--primary);
+  /* background-color: var(--white);
+  color: var(--primary); */
+  background-color: #02bfa6;
+  color: #dce6f2;
   border: 1px solid transparent;
 }
 .header-eight .primary-btn:hover {
-  background-color: transparent;
+  /* background-color: transparent; */
+  background-color: #02bfa6;
   color: var(--white);
   border-color: var(--white);
 }
