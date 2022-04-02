@@ -20,11 +20,11 @@
   "homepage": "https://github.com/Pils36/growng-landing#readme",
   "dependencies": {
     "axios": "^0.26.0",
+    "crawler": "^1.3.0",
     "dotenv": "^16.0.0",
     "ejs": "^3.1.6",
     "express": "^4.17.3",
     "express-ejs-extend": "^0.0.1",
-    "js-crawler": "^0.3.21",
     "nodemon": "^2.0.15",
     "path": "^0.12.7"
   }
