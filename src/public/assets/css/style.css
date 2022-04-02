@@ -1522,7 +1522,8 @@ p {
   display: inline-block;
   padding: 6px 15px 6px 7px;
   border-radius: 30px;
-  background-color: var(--primary);
+  /* background-color: var(--primary); */
+  background-color: #021613;
   position: absolute;
   right: 20px;
   bottom: 20px;
