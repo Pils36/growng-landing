@@ -1,8 +1,12 @@
   <!--====== js ======-->
   <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.26.1/axios.min.js"></script>
   <script src="assets/js/glightbox.min.js"></script>
   <script src="assets/js/main.js"></script>
   <script src="assets/js/tiny-slider.js"></script>
+  <script src="../../../blogpost.json"></script>
+
 
   <script>
       //===== close navbar-collapse when a  clicked
@@ -42,5 +46,49 @@
           'source': 'youtube', //vimeo, youtube or local
           'width': 900,
           'autoplayVideos': true,
+      });
+
+
+      $('document').ready(async function () {
+
+          const result = await axios.get('/crawler');
+
+          var postBody = '';
+
+          if (result.status === 200) {
+
+              for (let i = 0; i < result.data.length; i++) {
+                  const element = result.data[i];
+
+                  postBody += `
+                              <div class="col-lg-4 col-md-6 col-12">
+                                 
+                                  <div class="single-news">
+                                      <div class="image">
+                                          ${element.image}
+                                          <div class="meta-details">
+                                              <img class="thumb" src="assets/images/favicon.svg" alt="Author" />
+                                              <span>BY GROW</span>
+                                          </div>
+                                      </div>
+                                      <div class="content-body">
+                                          <h4 class="title">
+                                              ${element.title}
+                                          </h4>
+                                          <p>
+                                              ${element.content}
+                                          </p>
+                                      </div>
+                                  </div>
+                                  
+                              </div>
+                    `;
+
+
+              }
+
+              $('.blog-thumbnails').append(postBody);
+          }
+
       });
   </script>
