@@ -49,46 +49,46 @@
       });
 
 
-      $('document').ready(async function () {
+      //   $('document').ready(async function () {
 
-          const result = await axios.get('/crawler');
+      //       const result = await axios.get('/crawler');
 
-          var postBody = '';
+      //       var postBody = '';
 
-          if (result.status === 200) {
+      //       if (result.status === 200) {
 
-              for (let i = 0; i < result.data.length; i++) {
-                  const element = result.data[i];
+      //           for (let i = 0; i < result.data.length; i++) {
+      //               const element = result.data[i];
 
-                  postBody += `
-                              <div class="col-lg-4 col-md-6 col-12">
-                                 
-                                  <div class="single-news">
-                                      <div class="image">
-                                          ${element.image}
-                                          <div class="meta-details">
-                                              <img class="thumb" src="assets/images/favicon.svg" alt="Author" />
-                                              <span>BY GROW</span>
-                                          </div>
-                                      </div>
-                                      <div class="content-body">
-                                          <h4 class="title">
-                                              ${element.title}
-                                          </h4>
-                                          <p>
-                                              ${element.content}
-                                          </p>
-                                      </div>
-                                  </div>
-                                  
-                              </div>
-                    `;
+      //               postBody += `
+      //                           <div class="col-lg-4 col-md-6 col-12">
+
+      //                               <div class="single-news">
+      //                                   <div class="image">
+      //                                       ${element.image}
+      //                                       <div class="meta-details">
+      //                                           <img class="thumb" src="assets/images/favicon.svg" alt="Author" />
+      //                                           <span>BY GROW</span>
+      //                                       </div>
+      //                                   </div>
+      //                                   <div class="content-body">
+      //                                       <h4 class="title">
+      //                                           ${element.title}
+      //                                       </h4>
+      //                                       <p>
+      //                                           ${element.content}
+      //                                       </p>
+      //                                   </div>
+      //                               </div>
+
+      //                           </div>
+      //                 `;
 
 
-              }
+      //           }
 
-              $('.blog-thumbnails').append(postBody);
-          }
+      //           $('.blog-thumbnails').append(postBody);
+      //       }
 
-      });
+      //   });
   </script>
