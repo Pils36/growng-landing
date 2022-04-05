@@ -16,7 +16,7 @@ const postBlog = async (req, res) => {
 		const $ = cheerio.load(data);
 
 		// Select all the list items in plainlist class
-		const listItems = $('main div');
+		const listItems = $('main article');
 
 		// Stores data for all countries
 		const blogPost = [];
@@ -27,8 +27,8 @@ const postBlog = async (req, res) => {
 			// Select the text content of a and span elements
 			// Store the textcontent in the above object
 			post.content = $(el).children('div').text();
-			post.image = $(el).children('figure').html();
-			post.title = $(el).children('h2').html();
+			// post.image = $(el).children('figure').html();
+			post.title = $(el).children('header').html();
 
 			if (post.content != null && post.image != null) {
 				blogPost.push(post);

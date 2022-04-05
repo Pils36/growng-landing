@@ -53,9 +53,13 @@
 
           const result = await axios.get('/crawler');
 
+          //   console.log(result);
+
           var postBody = '';
 
           if (result.status === 200) {
+
+              $('.spinner-border').addClass('disp-0');
 
               for (let i = 0; i < result.data.length; i++) {
                   const element = result.data[i];
@@ -65,18 +69,22 @@
                                  
                                   <div class="single-news">
                                       <div class="image">
-                                          ${element.image}
+                                          <img src="https://growng.company/blog/wp-content/themes/twentyseventeen/assets/images/header.jpg"
+                                              width="2000" height="1200" alt="">
                                           <div class="meta-details">
                                               <img class="thumb" src="assets/images/favicon.svg" alt="Author" />
                                               <span>BY GROW</span>
                                           </div>
                                       </div>
                                       <div class="content-body">
-                                          <h4 class="title">
+                                          <h6 class="title">
                                               ${element.title}
-                                          </h4>
+                                          </h6>
                                           <p>
-                                              ${element.content}
+
+                                            ${element.content.length > 500 ? element.content.substring(0, 500) + "..." :
+                                            element.content}
+                                            
                                           </p>
                                       </div>
                                   </div>
@@ -89,6 +97,9 @@
 
               $('.blog-thumbnails').append(postBody);
           }
+
+          $('.updated').addClass('disp-0');
+
 
       });
   </script>
