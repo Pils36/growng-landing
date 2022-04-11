@@ -27,7 +27,7 @@ const postBlog = async (req, res) => {
 			// Select the text content of a and span elements
 			// Store the textcontent in the above object
 			post.content = $(el).children('div').text();
-			// post.image = $(el).children('figure').html();
+			post.image = $(el).children('figure').html();
 			post.title = $(el).children('header').html();
 
 			if (post.content != null && post.image != null) {
