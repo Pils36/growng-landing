@@ -42,7 +42,6 @@ const postBlog = async (req, res) => {
 				console.error(err);
 				return;
 			}
-			console.log('Successfully written data to file');
 			res.send(blogPost);
 		});
 	} catch (err) {
