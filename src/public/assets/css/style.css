@@ -7,8 +7,8 @@
   sans-serif;
   --primary: #155bd5;
   /* --site-color: #1d2c0c; */
-  --site-color: #02bfa6;
-  --site-hover: #02bfa6;
+  --site-color: #084028;
+  --site-hover: #084028;
   /* --site-hover: #551a07; */
   --primary-dark: #1c3ab6;
   --primary-light: #e2f1ff;
@@ -980,13 +980,13 @@ p {
   margin-right: 12px;
   /* background-color: var(--white);
   color: var(--primary); */
-  background-color: #02bfa6;
+  background-color: #084028;
   color: #dce6f2;
   border: 1px solid transparent;
 }
 .header-eight .primary-btn:hover {
   /* background-color: transparent; */
-  background-color: #02bfa6;
+  background-color: #084028;
   color: var(--white);
   border-color: var(--white);
 }
