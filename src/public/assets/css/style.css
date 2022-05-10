@@ -1529,7 +1529,7 @@ p {
   bottom: 20px;
 }
 .latest-news-area .single-news .image .meta-details img {
-  height: 28px;
+  /* height: 28px; */
   width: 28px;
   border-radius: 50%;
   display: inline-block;
