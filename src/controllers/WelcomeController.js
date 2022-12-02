@@ -8,7 +8,7 @@ const welcomeHome = (req, res) => {
 };
 
 const postBlog = async (req, res) => {
-	const url = 'https://growng.company/blog/';
+	const url = 'https://blog.growng.company/';
 	try {
 		// Fetch HTML of the page we want to scrape
 		const { data } = await axios.get(url);
